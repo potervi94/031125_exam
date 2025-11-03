@@ -61,3 +61,10 @@ print("З великої літери:", result)
 #  6. Напишіть функцію, яка приймає список рядків від
 # користувача і повертає новий список, що містить лише
 # рядки, які містять слово "Python".
+def contains_python(strings: list[str]) -> list[str]:
+    # Враховуємо точне слово "Python" (регістрочутливо)
+    return [s for s in strings if "Python" in s]
+
+result = contains_python(strings)
+print("Вхідні рядки:", strings)
+print("Містить слово Python:", result)
