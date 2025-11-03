@@ -1,73 +1,73 @@
-# # -*- coding: utf-8 -*-
-# #  1. Напишіть програму, яка приймає два цілих числа від
-# # користувача і виводить суму діапазону чисел між ними.
-# num1 = int(input("Перше ціле число"))
-# num2 = int(input("Друге ціле число"))
-#
-# start = min(num1, num2)
-# end = max(num1, num2)
-#
-# total = 0
-# for x in range(start, end + 1):
-#     total += x
-#
-# print("Сума діапазону:", total)
-#
-# #  2. Напишіть програму, для знаходження суми всіх парних
-# # чисел від 1 до 100.
-# sum_even = 0
-# for n in range(2, 101, 2):
-#     sum_even += n
-# print("Сума парних від 1 до 100:", sum_even)
-#
-# #  3. Напишіть програму, яка приймає рядок від користувача і
-# # виводить кожну літеру рядка на окремому рядку.
-# text = input("Введіть рядок: ")
-# for letter in text:
-#     print(letter)
-#
-# #  4. Напишіть програму, яка створює список цілих чисел та
-# # виводить новий список, який містить лише парні числа з
-# # вихідного списку.
-# numbers_input = input("Введіть цілі числа через пробіл: ")
-# numbers = [int(x) for x in numbers_input.split()]
-# even_numbers = [x for x in numbers if x % 2 == 0]
-# print("Парні числа:", even_numbers)
-#
-# # 5.Напишіть функцію, яка приймає список рядків від
-# # # користувача і повертає новий список, що містить лише
-# # # рядки, що починаються з великої літери.
-#
-# # Згенерований вхідний рядок (імітує ввід користувача)
-# input_string = "Apple banana Cherry dog Енот єнот Python java Ruby 123start _hidden"
-#
-# def only_capitalized(strings: list[str]) -> list[str]:
-#     """
-#     функція, яка приймає список рядків від
-#     користувача і повертає новий список, що містить лише
-#     рядки, що починаються з великої літери.
-#     """
-#
-#     return [s for s in strings if s and s[0].isalpha() and s[0].isupper()]
-#
-# # Перетворюємо на список рядків (за пробілами або іншим роздільником)
-# strings = input_string.split()
-#
-# result = only_capitalized(strings)
-# print("Вхідні рядки:", strings)
-# print("З великої літери:", result)
-#
-#
-# #  6. Напишіть функцію, яка приймає список рядків від
+# -*- coding: utf-8 -*-
+#  1. Напишіть програму, яка приймає два цілих числа від
+# користувача і виводить суму діапазону чисел між ними.
+num1 = int(input("Перше ціле число"))
+num2 = int(input("Друге ціле число"))
+
+start = min(num1, num2)
+end = max(num1, num2)
+
+total = 0
+for x in range(start, end + 1):
+    total += x
+
+print("Сума діапазону:", total)
+
+#  2. Напишіть програму, для знаходження суми всіх парних
+# чисел від 1 до 100.
+sum_even = 0
+for n in range(2, 101, 2):
+    sum_even += n
+print("Сума парних від 1 до 100:", sum_even)
+
+#  3. Напишіть програму, яка приймає рядок від користувача і
+# виводить кожну літеру рядка на окремому рядку.
+text = input("Введіть рядок: ")
+for letter in text:
+    print(letter)
+
+#  4. Напишіть програму, яка створює список цілих чисел та
+# виводить новий список, який містить лише парні числа з
+# вихідного списку.
+numbers_input = input("Введіть цілі числа через пробіл: ")
+numbers = [int(x) for x in numbers_input.split()]
+even_numbers = [x for x in numbers if x % 2 == 0]
+print("Парні числа:", even_numbers)
+
+# 5.Напишіть функцію, яка приймає список рядків від
 # # користувача і повертає новий список, що містить лише
-# # рядки, які містять слово "Python".
-# def contains_python(strings: list[str]) -> list[str]:
-#     # Враховуємо точне слово "Python" (регістрочутливо)
-#     return [s for s in strings if "Python" in s]
-#
-# result = contains_python(strings)
-# print("Вхідні рядки:", strings)
-# print("Містить слово Python:", result)
+# # рядки, що починаються з великої літери.
+
+# Згенерований вхідний рядок (імітує ввід користувача)
+input_string = "Apple banana Cherry dog Енот єнот Python java Ruby 123start _hidden"
+
+def only_capitalized(strings: list[str]) -> list[str]:
+    """
+    функція, яка приймає список рядків від
+    користувача і повертає новий список, що містить лише
+    рядки, що починаються з великої літери.
+    """
+
+    return [s for s in strings if s and s[0].isalpha() and s[0].isupper()]
+
+# Перетворюємо на список рядків (за пробілами або іншим роздільником)
+strings = input_string.split()
+
+result = only_capitalized(strings)
+print("Вхідні рядки:", strings)
+print("З великої літери:", result)
+
+
+#  6. Напишіть функцію, яка приймає список рядків від
+# користувача і повертає новий список, що містить лише
+# рядки, які містять слово "Python".
+def contains_python(strings: list[str]) -> list[str]:
+    # Враховуємо точне слово "Python" (регістрочутливо)
+    return [s for s in strings if "Python" in s]
+
+result = contains_python(strings)
+print("Вхідні рядки:", strings)
+print("Містить слово Python:", result)
 
 ##################################################################################
 #  7. (додаткове на кристалики) Напишіть програму, яка
