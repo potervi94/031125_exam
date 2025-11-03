@@ -34,6 +34,12 @@ class WebPage:
         self.content = content
         self.published_at = published_at or datetime.now()
 
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, WebPage):
+            return NotImplemented
+        return self.title == other.title
+
+
     def show_details(self):
         # Заглушка: вивід деталей сторінки
         print(
